@@ -1,14 +1,21 @@
-import React from 'react';
-import './index.css';
-
-
+import Navbar from "./Components/Navbar";
+import HomePage from "./pages/HomePage";
+import CreatePage from "./pages/CreatePage";
+import {Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div >
-     <h1 className='bg-red-200'>MERN</h1>
+    <div className="min-h-screen bg-blue-200">
+     <Navbar/>
+     <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/create" element={<CreatePage/>}/>
+     </Routes>
+     
+  
     </div>
   );
-}
+};
 
 export default App;
+
