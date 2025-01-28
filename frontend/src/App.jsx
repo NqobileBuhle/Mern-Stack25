@@ -5,7 +5,7 @@ import {Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-blue-200">
+    <div className="min-h-screen bg-gray-200">
      <Navbar/>
      <Routes>
       <Route path="/" element={<HomePage/>}/>
