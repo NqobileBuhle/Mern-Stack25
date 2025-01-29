@@ -13,19 +13,19 @@ const HeroSection = () => {
           <p className="mt-4 text-lg text-gray-700">
             Our next-generation products are the answer to all your skincare needs.
           </p>
-          <button className="mt-6 bg-blue-400 text-white py-2 px-6 rounded-md hover:bg-green-800">
+          <button className="mt-6 bg-blue-400 text-white py-2 px-6 rounded-md hover:bg-blue-800">
             Order now
           </button>
           <div className="mt-8">
             <p className="text-sm font-semibold text-gray-600 mb-2">PRODUCT'S CATEGORY</p>
             <div className="flex gap-4">
-              <button className="bg-blue-100 text-purple-700 py-1 px-4 rounded-full hover:bg-orange-200">
+              <button className="bg-blue-100 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
                 Serum
               </button>
-              <button className="bg-blue-100 text-purple-700 py-1 px-4 rounded-full hover:bg-orange-200">
+              <button className="bg-blue-100 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
                 Face cream
               </button>
-              <button className="bg-blue-100 text-purple-700 py-1 px-4 rounded-full hover:bg-orange-200">
+              <button className="bg-blue-100 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
                 Mask
               </button>
             </div>
@@ -37,11 +37,11 @@ const HeroSection = () => {
           {/* Product Image */}
           <div className="relative mx-auto">
           <img
-            src="https://images.pexels.com/photos/4041391/pexels-photo-4041391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/28112139/pexels-photo-28112139/free-photo-of-woman-holding-vials-of-cosmetics-around-face.jpeg"
             alt="Product"
             className="rounded-lg shadow-lg"
           />
-            <div className="absolute top-4 left-4 bg-orange-500 text-white text-sm py-1 px-3 rounded-full shadow-md">
+            <div className="absolute top-4 left-4 bg-purple-500 text-white text-sm py-1 px-3 rounded-full shadow-md">
               Watch promo
             </div>
           </div>
