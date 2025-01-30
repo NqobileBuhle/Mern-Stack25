@@ -28,7 +28,7 @@ const CreatePage = () => {
 
   return (
     <div className="flex flex-col items-center space-y-8">
-      <h1 className="text-3xl text-center mb-8">Create New Product</h1>
+      <h1 className="text-3xl text-center mb-8 text-purple-500 font-bold">Create New Product</h1>
 
       <div className="bg-blue-300 p-6 w-full max-w-md rounded-lg shadow-md">
         <div className="flex flex-col space-y-4">
@@ -73,7 +73,7 @@ const CreatePage = () => {
 
           {/* Submit Button */}
           <button
-            className="bg-blue-400 text-white py-2 px-4 rounded-md w-full hover:bg-blue-500"
+            className="bg-purple-300 text-gray-600 py-2 px-4 rounded-md w-full hover:bg-purple-500"
             onClick={handleAddProduct}
           >
             Add Product
