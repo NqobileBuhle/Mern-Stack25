@@ -42,5 +42,29 @@ export const useProductStore = create((set) => ({
     const res=await fetch("/api/products");
     const data=await res.json();
     set({products:data.data})
-  }
+  },
+  deleteProduct: async (pid) => {
+    try {
+      const res = await fetch(`/api/products/${pid}`, {
+        method: "DELETE",
+      });
+  
+      const data = await res.json();
+  
+      if (!res.ok) {
+        return { success: false, message: data?.message || "Failed to delete product." };
+      }
+  
+      // Remove the deleted product from the store
+      set((state) => ({
+        products: state.products.filter((product) => product._id !== pid),
+      }));
+  
+      return { success: true, message: "Product deleted successfully." };
+    } catch (err) {
+      console.error("Error deleting product:", err);
+      return { success: false, message: "An error occurred. Please try again." };
+    }
+  },
+  
 }));

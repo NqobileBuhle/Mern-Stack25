@@ -13,19 +13,19 @@ const HeroSection = () => {
           <p className="mt-4 text-lg text-gray-700">
             Our next-generation products are the answer to all your skincare needs.
           </p>
-          <button className="mt-6 bg-blue-400 text-white py-2 px-6 rounded-md hover:bg-blue-800">
+          <button className="mt-6 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-400">
             Order now
           </button>
           <div className="mt-8">
             <p className="text-sm font-semibold text-gray-600 mb-2">PRODUCT'S CATEGORY</p>
             <div className="flex gap-4">
-              <button className="bg-blue-100 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
+              <button className="bg-blue-200 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
                 Serum
               </button>
-              <button className="bg-blue-100 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
+              <button className="bg-blue-200 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
                 Face cream
               </button>
-              <button className="bg-blue-100 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
+              <button className="bg-blue-200 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
                 Mask
               </button>
             </div>
@@ -53,7 +53,7 @@ const HeroSection = () => {
             </p>
             <a
               href="#"
-              className="mt-4 inline-block text-orange-500 font-medium hover:underline"
+              className="mt-4 inline-block text-purple-500 font-medium hover:underline"
             >
               Get yours <span className="ml-1">→</span>
             </a>
