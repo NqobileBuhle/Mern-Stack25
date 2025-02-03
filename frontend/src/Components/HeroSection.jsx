@@ -35,7 +35,7 @@ const HeroSection = () => {
         {/* Right Section: Product Image and Info */}
         <div className="relative">
           {/* Product Image */}
-          <div className="relative mx-auto">
+          <div className="relative mx-auto ">
           <img
             src="https://images.pexels.com/photos/28112139/pexels-photo-28112139/free-photo-of-woman-holding-vials-of-cosmetics-around-face.jpeg"
             alt="Product"
