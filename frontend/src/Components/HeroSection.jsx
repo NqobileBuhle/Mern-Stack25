@@ -2,67 +2,104 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="bg-beige min-h-screen flex items-center justify-center">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto px-4">
-        {/* Left Section: Headline and Description */}
-        <div>
-          <p className="text-sm text-gray-500 uppercase mb-2">Sale for first purchase</p>
-          <h1 className="text-5xl font-bold text-gray-900 leading-tight">
-            Future of <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-center">facial cosmetics</span>
-          </h1>
-          <p className="mt-4 text-lg text-gray-700">
-            Our next-generation products are the answer to all your skincare needs.
-          </p>
-          <button className="mt-6 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-400">
-            Order now
-          </button>
-          <div className="mt-8">
-            <p className="text-sm font-semibold text-gray-600 mb-2">PRODUCT'S CATEGORY</p>
-            <div className="flex gap-4">
-              <button className="bg-blue-200 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
-                Serum
-              </button>
-              <button className="bg-blue-200 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
-                Face cream
-              </button>
-              <button className="bg-blue-200 text-purple-700 py-1 px-4 rounded-full hover:bg-purple-300">
-                Mask
-              </button>
-            </div>
-          </div>
-        </div>
+    <div
+      className="min-h-screen flex flex-col justify-between"
+      style={{
+        background: "linear-gradient(to bottom, #fad4d6, #fdd6d3, #fef2e3)",
+      }}
+    >
+      {/* Navigation */}
+      <header className="flex justify-between items-center px-12 py-6">
+        <nav className="flex gap-8 text-sm text-gray-700">
+          <a href="#" className="hover:underline">
+            New Arrivals
+          </a>
+          <a href="#" className="hover:underline">
+            Make Up
+          </a>
+          <a href="#" className="hover:underline">
+            Skincare
+          </a>
+          <a href="#" className="hover:underline">
+            Fragrance
+          </a>
+        </nav>
+        <div className="text-2xl font-bold text-pink-950">ST</div>
+        <nav className="flex gap-8 text-sm text-gray-700">
+          <a href="#" className="hover:underline">
+            Journal
+          </a>
+          <a href="#" className="hover:underline">
+            Academy
+          </a>
+          <a href="#" className="hover:underline">
+            Cart (0)
+          </a>
+        </nav>
+      </header>
 
-        {/* Right Section: Product Image and Info */}
-        <div className="relative">
-          {/* Product Image */}
-          <div className="relative mx-auto ">
+      {/* Hero Content */}
+      <main className="relative flex flex-col items-center text-center px-6">
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
           <img
             src="https://images.pexels.com/photos/28112139/pexels-photo-28112139/free-photo-of-woman-holding-vials-of-cosmetics-around-face.jpeg"
-            alt="Product"
-            className="rounded-lg shadow-lg"
+            alt="Hero Background"
+            className="w-full h-full object-cover"
           />
-            <div className="absolute top-4 left-4 bg-purple-500 text-white text-sm py-1 px-3 rounded-full shadow-md">
-              Watch promo
-            </div>
-          </div>
-          {/* Additional Info */}
-          <div className="mt-8">
-            <h2 className="text-2xl font-bold text-gray-900">The Next Gen of Skincare</h2>
-            <p className="text-gray-700 mt-2">
-              See for yourself that our products are the future of facial cosmetics.
-            </p>
-            <a
-              href="#"
-              className="mt-4 inline-block text-purple-500 font-medium hover:underline"
-            >
-              Get yours <span className="ml-1">→</span>
-            </a>
-          </div>
         </div>
-      </div>
+
+        <h1 className="text-5xl lg:text-7xl font-serif font-bold text-white">
+          Face Your Skin.
+        </h1>
+        <p className="text-white text-lg max-w-lg mt-4">
+          A Cool-Toned Color Story Featuring 15 NEW Enchanting Muted Rosy And
+          Nude Shades.
+        </p>
+        <div className="flex gap-4 mt-6">
+          <button className="bg-pink-600 text-white py-3 px-6 text-lg rounded-md shadow-lg hover:bg-pink-500">
+            Shop Now
+          </button>
+          <button className="bg-white text-pink-600 py-3 px-6 text-lg rounded-md shadow-lg hover:bg-gray-200">
+            Explore More
+          </button>
+        </div>
+      </main>
+
+      {/* Product Slider */}
+      <section className="bg-white py-6">
+        <h2 className="text-gray-800 text-lg font-bold text-left px-12">
+          Just In
+        </h2>
+        <div className="flex gap-6 overflow-x-auto px-12 py-4">
+          {/* Product Cards */}
+          {[
+            { title: "Glazed N’ Amused", price: "$52.00" },
+            { title: "I Need A Nude Lip Crayon", price: "$52.00" },
+            { title: "Bronze Cheek", price: "$52.00" },
+          ].map((product, index) => (
+            <div
+              key={index}
+              className="bg-gray-100 w-64 rounded-lg shadow-md p-4 flex-shrink-0"
+            >
+              <img
+                src="https://images.pexels.com/photos/28112139/pexels-photo-28112139/free-photo-of-woman-holding-vials-of-cosmetics-around-face.jpeg"
+                alt={product.title}
+                className="rounded-lg mb-4"
+              />
+              <h3 className="text-gray-700 text-lg font-semibold">
+                {product.title}
+              </h3>
+              <p className="text-gray-600">{product.price}</p>
+              <button className="text-pink-600 mt-2 text-sm hover:underline">
+                + Cart
+              </button>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
 
 export default HeroSection;
-
