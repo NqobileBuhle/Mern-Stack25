@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import path from "path";
 import productRoutes from "./routes/products.routes.js";
+import UserRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ const __dirname=path.resolve();
 app.use(express.json()); 
 
 app.use("/api/products",productRoutes);
+app.use("/api/users",UserRoutes)
 
 
 //Deployment

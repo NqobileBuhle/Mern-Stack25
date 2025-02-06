@@ -15,13 +15,13 @@ const HeroSection = () => {
             New Arrivals
           </a>
           <a href="#" className="hover:underline">
-            Make Up
+            Facials
           </a>
           <a href="#" className="hover:underline">
             Skincare
           </a>
           <a href="#" className="hover:underline">
-            Fragrance
+            Pigmentation
           </a>
         </nav>
         <div className="text-2xl font-bold text-pink-950">ST</div>
@@ -30,7 +30,7 @@ const HeroSection = () => {
             Journal
           </a>
           <a href="#" className="hover:underline">
-            Academy
+            Blog
           </a>
           <a href="#" className="hover:underline">
             Cart (0)
@@ -41,9 +41,9 @@ const HeroSection = () => {
       {/* Hero Content */}
       <main className="relative flex flex-col items-center text-center px-6">
         {/* Background Image */}
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 -z-10 h-full w-full">
           <img
-            src="https://images.pexels.com/photos/28112139/pexels-photo-28112139/free-photo-of-woman-holding-vials-of-cosmetics-around-face.jpeg"
+            src="https://unsplash.com/photos/a-hand-holding-a-small-bottle-of-liquid-OeU6dAE5Y4E"
             alt="Hero Background"
             className="w-full h-full object-cover"
           />
@@ -53,8 +53,7 @@ const HeroSection = () => {
           Face Your Skin.
         </h1>
         <p className="text-white text-lg max-w-lg mt-4">
-          A Cool-Toned Color Story Featuring 15 NEW Enchanting Muted Rosy And
-          Nude Shades.
+         Our next-generation products are the answer to all your skincare needs.
         </p>
         <div className="flex gap-4 mt-6">
           <button className="bg-pink-600 text-white py-3 px-6 text-lg rounded-md shadow-lg hover:bg-pink-500">
@@ -74,9 +73,9 @@ const HeroSection = () => {
         <div className="flex gap-6 overflow-x-auto px-12 py-4">
           {/* Product Cards */}
           {[
-            { title: "Glazed N’ Amused", price: "$52.00" },
-            { title: "I Need A Nude Lip Crayon", price: "$52.00" },
-            { title: "Bronze Cheek", price: "$52.00" },
+            { title: "Glazed N’ Amused", price: "R52.00" },
+            { title: "I Need A Nude Lip Crayon", price: "R52.00" },
+            { title: "Bronze Cheek", price: "R52.00" },
           ].map((product, index) => (
             <div
               key={index}
