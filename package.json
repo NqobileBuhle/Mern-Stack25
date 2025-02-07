@@ -21,7 +21,9 @@
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.474.0",
     "mongoose": "^8.9.6",
-    "react-toastify": "^11.0.3"
+    "react-slick": "^0.30.3",
+    "react-toastify": "^11.0.3",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
