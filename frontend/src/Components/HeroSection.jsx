@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <div className="min-h-screen relative bg-cover bg-center flex flex-col justify-between bg-pink-300"
          style={ 
-          { backgroundImage: "url('https://images.unsplash.com/photo-1498843053639-170ff2122f35?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNraW4lMjBjYXJlfGVufDB8fDB8fHww')" }
+          { backgroundImage: "url('https://media.istockphoto.com/id/1446059501/photo/close-up-shot-of-smiling-dark-skinned-woman-with-curly-afro-hair-applying-face-cream.jpg?s=612x612&w=0&k=20&c=jNMOike3RK4FraZTibr_JYFnqxj_ByDNlvp9w01DCd0=')" }
          }>
       {/* Navigation */}
       <header className="flex justify-between items-center px-12 py-6 text-white">
@@ -40,9 +40,9 @@ const HeroSection = () => {
         <div className="flex gap-6 overflow-x-auto px-12 py-4">
           {/* Product Cards */}
           {[
-            { title: "Glazed N’ Amused", price: "$52.00", image: "https://images.unsplash.com/photo-1559881230-1af605ca3f67?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNraW4lMjBjYXJlfGVufDB8fDB8fHww" },
-            { title: "I Need A Nude Lip Crayon", price: "$52.00", image: "https://images.unsplash.com/photo-1559881230-1af605ca3f67?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNraW4lMjBjYXJlfGVufDB8fDB8fHww" },
-            { title: "Bronze Cheek", price: "$52.00", image: "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHNraW4lMjBjYXJlfGVufDB8fDB8fHww" },
+            { title: "Glazed N’ Amused", price: "R52.00", image: "https://images.unsplash.com/photo-1559881230-1af605ca3f67?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNraW4lMjBjYXJlfGVufDB8fDB8fHww" },
+            { title: "I Need A Nude Lip Crayon", price: "R52.00", image: "https://images.unsplash.com/photo-1559881230-1af605ca3f67?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNraW4lMjBjYXJlfGVufDB8fDB8fHww" },
+            { title: "Bronze Cheek", price: "R52.00", image: "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHNraW4lMjBjYXJlfGVufDB8fDB8fHww" },
           ].map((product, index) => (
             <div key={index} className="bg-gray-100 rounded-lg shadow-md p-4 w-64 flex-shrink-0">
               <img src={product.image} alt={product.title} className="rounded-lg mb-4" />

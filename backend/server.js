@@ -1,34 +1,45 @@
 import express from "express";
 import dotenv from "dotenv";
-import { connectDB } from "./config/db.js";
 import path from "path";
+import { connectDB } from "./config/db.js";
 import productRoutes from "./routes/products.routes.js";
-import UserRoutes from "./routes/userRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
 
 const app = express();
-const PORT=process.env.PORT||5000;
-const __dirname=path.resolve();
-app.use(express.json()); 
+const PORT = process.env.PORT || 5000;
+const __dirname = path.resolve();
 
-app.use("/api/products",productRoutes);
-app.use("/api/users",UserRoutes)
+// Connect to MongoDB first
+connectDB();
 
+// Middleware to parse JSON & URL Encoded data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-//Deployment
-if(process.env.NODE_ENV==="production"){
- app.use(express.static(path.join(__dirname, "/frontend/dist")));
- app.get("*",(req,res)=>{
-  res.sendFile(path.resolve(__dirname,"frontend","dist","index.html"));
- })
- 
+// API Routes
+app.use("/api/products", productRoutes);
+app.use("/api/users", userRoutes);
+
+// Not Found & Error Handling Middleware
+app.use(notFound);
+app.use(errorHandler);
+
+// Deployment Settings
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
+  );
 }
-app.get('/',(req,res)=>res.send('Server is ready'));
 
+// Simple Test Route
+app.get("/", (req, res) => res.send("Server is ready"));
 
-
+// Start Server
 app.listen(PORT, () => {
-  connectDB();
-  console.log("Server started at http://localhost:"+ PORT);
+  console.log(`Server started at http://localhost:${PORT}`);
 });
