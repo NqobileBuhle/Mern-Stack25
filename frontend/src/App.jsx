@@ -7,6 +7,10 @@ import Footer from "./Components/Footer";
 import SocialMediaSection from "./Components/SocialMediaSection";
 import BlogSection from "./Components/BlogSection";
 import Testimonials from "./Components/Testimonials";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
+import Profile from "./Components/Profile";
+
 
 const App = () => {
   return (
@@ -20,6 +24,9 @@ const App = () => {
       <Route path="/" element={<HomePage/>}/>
       {/* <Route path="/blog" element={<BlogSection/>}/> */}
       <Route path="/create" element={<CreatePage/>}/>
+      <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
       
 
      </Routes>

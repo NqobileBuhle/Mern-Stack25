@@ -5,6 +5,7 @@ import { connectDB } from "./config/db.js";
 import productRoutes from "./routes/products.routes.js";
 import userRoutes from "./routes/userRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -16,8 +17,13 @@ const __dirname = path.resolve();
 connectDB();
 
 // Middleware to parse JSON & URL Encoded data
+app.get('/', (req, res) => {
+  res.json({ message: 'API is running...' });
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(cookieParser());
 
 // API Routes
 app.use("/api/products", productRoutes);
